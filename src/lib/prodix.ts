@@ -1,11 +1,85 @@
 export const services = [
-  { id: 'consulting', number: '01', name: 'Consulting', pillar: 'Formaliser', description: 'De la création au pilotage, donnez des bases solides à votre entreprise.', items: ['Choix du statut juridique, création et formalités administratives', 'Comptabilité, comptes annuels et déclarations fiscales et sociales', 'Dossiers de financement, audit et coaching de gestion', 'Formation aux logiciels ODOO et SAGE'], tagline: 'Une entreprise formelle, conforme et finançable.' },
-  { id: 'centrale-achat', number: '02', name: "Centrale d’achat", pillar: 'Équiper', description: 'Les fournitures et les équipements dont vos équipes ont besoin, au même endroit.', items: ['Encres originales et génériques pour vos imprimantes', 'Ordinateurs, smartphones, routeurs et accessoires', 'Mobilier, bureautique et équipements industriels', 'Équipements de protection individuelle et tentes'], tagline: 'Un interlocuteur unique pour vos approvisionnements.' },
-  { id: 'reprographie', number: '03', name: 'Reprographie', pillar: 'Équiper', description: 'Des documents aux supports publicitaires, donnez forme à vos idées.', items: ['Brochures, cartes de visite, flyers, livres et facturiers', 'Impression sur tee-shirts, sacs, stylos et verres', 'Banderoles, roll-up, étiquettes et panneaux', 'Photocopie, numérisation tous formats et reliure'], tagline: 'Votre marque, sur tous les supports.' },
-  { id: 'digital', number: '04', name: 'Digital', pillar: 'Connecter', description: 'Une identité cohérente et une présence en ligne qui font grandir votre activité.', items: ['Identité de marque, logo et charte graphique', 'Gestion des réseaux sociaux', 'Sites vitrines, conception graphique et référencement', 'Applications mobiles sur mesure'], tagline: 'De votre identité à votre site en ligne.' },
-  { id: 'escapade', number: '05', name: 'Escapade', pillar: 'Connecter', description: 'Vos projets ne s’arrêtent pas aux frontières. Nous accompagnons votre mobilité.', items: ['Assistance aux demandes de visas et démarches d’immigration', 'Europe / Schengen, USA, Canada, Chine, Turquie et Dubaï', 'Assistance voyages : billets, logements et véhicules', 'Location de berlines, SUV, bus, camions, engins et bateaux'], tagline: 'Vos équipes en mouvement, en toute sérénité.' },
+  {
+    id: "consulting",
+    number: "01",
+    name: "Consulting",
+    pillar: "Formaliser",
+    description: "De la création au pilotage, donnez des bases solides à votre entreprise.",
+    items: [
+      "Choix du statut juridique, création et formalités administratives",
+      "Comptabilité, comptes annuels et déclarations fiscales et sociales",
+      "Dossiers de financement, audit et coaching de gestion",
+      "Formation aux logiciels ODOO et SAGE",
+    ],
+    tagline: "Une entreprise formelle, conforme et finançable.",
+  },
+  {
+    id: "centrale-achat",
+    number: "02",
+    name: "Centrale d’achat",
+    pillar: "Équiper",
+    description: "Les fournitures et les équipements dont vos équipes ont besoin, au même endroit.",
+    items: [
+      "Encres originales et génériques pour vos imprimantes",
+      "Ordinateurs, smartphones, routeurs et accessoires",
+      "Mobilier, bureautique et équipements industriels",
+      "Équipements de protection individuelle et tentes",
+    ],
+    tagline: "Un interlocuteur unique pour vos approvisionnements.",
+  },
+  {
+    id: "reprographie",
+    number: "03",
+    name: "Reprographie",
+    pillar: "Équiper",
+    description: "Des documents aux supports publicitaires, donnez forme à vos idées.",
+    items: [
+      "Brochures, cartes de visite, flyers, livres et facturiers",
+      "Impression sur tee-shirts, sacs, stylos et verres",
+      "Banderoles, roll-up, étiquettes et panneaux",
+      "Photocopie, numérisation tous formats et reliure",
+    ],
+    tagline: "Votre marque, sur tous les supports.",
+  },
+  {
+    id: "digital",
+    number: "04",
+    name: "Digital",
+    pillar: "Connecter",
+    description: "Une identité cohérente et une présence en ligne qui font grandir votre activité.",
+    items: [
+      "Identité de marque, logo et charte graphique",
+      "Gestion des réseaux sociaux",
+      "Sites vitrines, conception graphique et référencement",
+      "Applications mobiles sur mesure",
+    ],
+    tagline: "De votre identité à votre site en ligne.",
+  },
+  {
+    id: "escapade",
+    number: "05",
+    name: "Escapade",
+    pillar: "Connecter",
+    description: "Vos projets ne s’arrêtent pas aux frontières. Nous accompagnons votre mobilité.",
+    items: [
+      "Assistance aux demandes de visas et démarches d’immigration",
+      "Europe / Schengen, USA, Canada, Chine, Turquie et Dubaï",
+      "Assistance voyages : billets, logements et véhicules",
+      "Location de berlines, SUV, bus, camions, engins et bateaux",
+    ],
+    tagline: "Vos équipes en mouvement, en toute sérénité.",
+  },
 ] as const;
 
 export function pageHead(title: string, description: string) {
-  return { meta: [{ title }, { name: 'description', content: description }, { property: 'og:title', content: title }, { property: 'og:description', content: description }, { property: 'og:type', content: 'website' }, { name: 'twitter:card', content: 'summary_large_image' }] };
+  return {
+    meta: [
+      { title },
+      { name: "description", content: description },
+      { property: "og:title", content: title },
+      { property: "og:description", content: description },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+  };
 }

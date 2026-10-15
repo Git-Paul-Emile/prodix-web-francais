@@ -10,13 +10,20 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as CguRouteImport } from './routes/cgu'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as LeGroupeRouteImport } from './routes/le-groupe'
 import { Route as NosServicesRouteImport } from './routes/nos-services'
+import { Route as PolitiqueDeConfidentialiteRouteImport } from './routes/politique-de-confidentialite'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CguRoute = CguRouteImport.update({
+  id: '/cgu',
+  path: '/cgu',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ContactRoute = ContactRouteImport.update({
@@ -34,39 +41,72 @@ const NosServicesRoute = NosServicesRouteImport.update({
   path: '/nos-services',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PolitiqueDeConfidentialiteRoute =
+  PolitiqueDeConfidentialiteRouteImport.update({
+    id: '/politique-de-confidentialite',
+    path: '/politique-de-confidentialite',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/cgu': typeof CguRoute
   '/contact': typeof ContactRoute
   '/le-groupe': typeof LeGroupeRoute
   '/nos-services': typeof NosServicesRoute
+  '/politique-de-confidentialite': typeof PolitiqueDeConfidentialiteRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/cgu': typeof CguRoute
   '/contact': typeof ContactRoute
   '/le-groupe': typeof LeGroupeRoute
   '/nos-services': typeof NosServicesRoute
+  '/politique-de-confidentialite': typeof PolitiqueDeConfidentialiteRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/cgu': typeof CguRoute
   '/contact': typeof ContactRoute
   '/le-groupe': typeof LeGroupeRoute
   '/nos-services': typeof NosServicesRoute
+  '/politique-de-confidentialite': typeof PolitiqueDeConfidentialiteRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/contact' | '/le-groupe' | '/nos-services'
+  fullPaths:
+    | '/'
+    | '/cgu'
+    | '/contact'
+    | '/le-groupe'
+    | '/nos-services'
+    | '/politique-de-confidentialite'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/contact' | '/le-groupe' | '/nos-services'
-  id: '__root__' | '/' | '/contact' | '/le-groupe' | '/nos-services'
+  to:
+    | '/'
+    | '/cgu'
+    | '/contact'
+    | '/le-groupe'
+    | '/nos-services'
+    | '/politique-de-confidentialite'
+  id:
+    | '__root__'
+    | '/'
+    | '/cgu'
+    | '/contact'
+    | '/le-groupe'
+    | '/nos-services'
+    | '/politique-de-confidentialite'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  CguRoute: typeof CguRoute
   ContactRoute: typeof ContactRoute
   LeGroupeRoute: typeof LeGroupeRoute
   NosServicesRoute: typeof NosServicesRoute
+  PolitiqueDeConfidentialiteRoute: typeof PolitiqueDeConfidentialiteRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -76,6 +116,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cgu': {
+      id: '/cgu'
+      path: '/cgu'
+      fullPath: '/cgu'
+      preLoaderRoute: typeof CguRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/contact': {
@@ -99,14 +146,23 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof NosServicesRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/politique-de-confidentialite': {
+      id: '/politique-de-confidentialite'
+      path: '/politique-de-confidentialite'
+      fullPath: '/politique-de-confidentialite'
+      preLoaderRoute: typeof PolitiqueDeConfidentialiteRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  CguRoute: CguRoute,
   ContactRoute: ContactRoute,
   LeGroupeRoute: LeGroupeRoute,
   NosServicesRoute: NosServicesRoute,
+  PolitiqueDeConfidentialiteRoute: PolitiqueDeConfidentialiteRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

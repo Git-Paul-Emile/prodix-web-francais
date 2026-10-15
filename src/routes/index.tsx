@@ -1,14 +1,167 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Link } from '@tanstack/react-router';
-import { Button } from '@/components/ui/button';
-import { Partners, ContactBand } from '@/components/site';
-import { pageHead, services } from '@/lib/prodix';
-import hero from '@/assets/libreville.jpg';
+import { Link } from "@tanstack/react-router";
+import { Button } from "@/components/ui/button";
+import { Partners, ContactBand } from "@/components/site";
+import { pageHead, services } from "@/lib/prodix";
+import { ArrowRight } from "lucide-react";
+import hero from "@/assets/libreville.jpg";
 
 export const Route = createFileRoute("/")({
-  head: () => pageHead('PRODIX Group | De l’idée à l’entreprise, au Gabon', 'À Libreville, PRODIX Group accompagne votre entreprise : consulting, centrale d’achat, reprographie, digital et mobilité.'),
+  head: () =>
+    pageHead(
+      "PRODIX Group | De l’idée à l’entreprise, au Gabon",
+      "À Libreville, PRODIX Group accompagne votre entreprise : consulting, centrale d’achat, reprographie, digital et mobilité.",
+    ),
   component: Index,
 });
 function Index() {
-  return <main><section className="hero"><img className="hero-image" src={hero} alt="Vue illustrative du littoral de Libreville" width={1920} height={1024} fetchPriority="high" /><div className="hero-shade" /><div className="site-width hero-content"><span className="eyebrow light-eyebrow">ANCRÉS AU GABON. TOURNÉS VERS L’AVENIR.</span><h1>PRODIX Group</h1><h2>De l’idée à<br /><span>l’entreprise.</span></h2><p>Créer, structurer, équiper, digitaliser.<br />Un seul partenaire pour faire avancer vos ambitions.</p><div className="hero-actions"><Button asChild className="orange-button"><Link to="/contact">Parlons de votre projet</Link></Button><Button asChild variant="ghost" className="hero-secondary"><Link to="/nos-services">Découvrir nos services</Link></Button></div></div><div className="hero-caption">LIBREVILLE, GABON <span>01 / PRODIX GROUP</span></div></section><section className="pillar-strip"><div className="site-width"><Link to="/nos-services" hash="consulting"><span className="pillar-number">01</span><div><h3>Formaliser</h3><p>Des bases solides pour entreprendre.</p></div></Link><Link to="/nos-services" hash="centrale-achat"><span className="pillar-number">02</span><div><h3>Équiper</h3><p>Les moyens de vos ambitions.</p></div></Link><Link to="/nos-services" hash="digital"><span className="pillar-number">03</span><div><h3>Connecter</h3><p>Votre entreprise ouverte sur le monde.</p></div></Link></div></section><Partners /><section className="intro-section site-width"><div><span className="eyebrow">LE GROUPE PRODIX</span><h2>Un partenaire.<br />Toutes les étapes.</h2></div><div><p className="large-copy">Entreprendre est une ambition.<br />La concrétiser, c’est notre métier.</p><p>Nous accompagnons les entrepreneurs et les organisations à chaque étape de leur développement. De la première idée à une entreprise formelle, solide et durable, nos expertises se complètent sous un même toit.</p><Button asChild variant="link" className="text-link"><Link to="/le-groupe">Rencontrez votre partenaire</Link></Button></div></section><section className="services-preview"><div className="site-width"><div className="section-heading"><div><span className="eyebrow">CINQ EXPERTISES, UNE MÊME EXIGENCE</span><h2>À chaque besoin,<br />la bonne expertise.</h2></div><Button asChild variant="outline"><Link to="/nos-services">Tous nos services</Link></Button></div><div className="service-grid">{services.map(service => <Link to="/nos-services" hash={service.id} key={service.id} className="service-card"><div className="service-card-top"><span>{service.number}</span><span>{service.pillar}</span></div><h3>{service.name}</h3><p>{service.description}</p><span className="service-discover">Découvrir</span></Link>)}</div></div></section><section className="mission-section site-width"><span className="eyebrow">NOTRE CONVICTION</span><h2>Une entreprise qui se formalise,<br />c’est un avenir qui se construit.</h2><p>Des emplois déclarés, des travailleurs couverts, un accès au crédit. La formalisation de l’économie est au cœur de notre métier et de notre contribution au développement du Gabon.</p><Link to="/le-groupe" className="text-link">Découvrir notre vision</Link></section><ContactBand /></main>;
+  return (
+    <main>
+      <section className="hero">
+        <img
+          className="hero-image"
+          src={hero}
+          alt="Vue illustrative du littoral de Libreville"
+          width={1920}
+          height={1024}
+          fetchPriority="high"
+        />
+        <div className="hero-shade" />
+        <div className="site-width hero-content">
+          <span className="eyebrow light-eyebrow">ANCRÉS AU GABON. TOURNÉS VERS L’AVENIR.</span>
+          <h1>PRODIX Group</h1>
+          <h2>
+            De l’idée à<br />
+            <span>l’entreprise.</span>
+          </h2>
+          <p>
+            Créer, structurer, équiper, digitaliser.
+            <br />
+            Un seul partenaire pour faire avancer vos ambitions.
+          </p>
+          <div className="hero-actions">
+            <Button asChild className="orange-button">
+              <Link to="/contact">Parlons de votre projet</Link>
+            </Button>
+            <Button asChild variant="ghost" className="hero-secondary">
+              <Link to="/nos-services">Découvrir nos services</Link>
+            </Button>
+          </div>
+        </div>
+        <div className="hero-caption">
+          LIBREVILLE, GABON <span>01 / PRODIX GROUP</span>
+        </div>
+      </section>
+
+      <section className="pillar-strip">
+        <div className="site-width">
+          <Link to="/nos-services" hash="consulting">
+            <span className="pillar-number">01</span>
+            <div>
+              <h3>Formaliser</h3>
+              <p>Des bases solides pour entreprendre.</p>
+            </div>
+          </Link>
+          <Link to="/nos-services" hash="centrale-achat">
+            <span className="pillar-number">02</span>
+            <div>
+              <h3>Équiper</h3>
+              <p>Les moyens de vos ambitions.</p>
+            </div>
+          </Link>
+          <Link to="/nos-services" hash="digital">
+            <span className="pillar-number">03</span>
+            <div>
+              <h3>Connecter</h3>
+              <p>Votre entreprise ouverte sur le monde.</p>
+            </div>
+          </Link>
+        </div>
+      </section>
+
+      <Partners />
+
+      <section className="intro-section site-width">
+        <div>
+          <span className="eyebrow">LE GROUPE PRODIX</span>
+          <h2>
+            Un partenaire.
+            <br />
+            Toutes les étapes.
+          </h2>
+        </div>
+        <div>
+          <p className="large-copy">
+            Entreprendre est une ambition.
+            <br />
+            La concrétiser, c’est notre métier.
+          </p>
+          <p>
+            Nous accompagnons les entrepreneurs et les organisations à chaque étape de leur
+            développement. De la première idée à une entreprise formelle, solide et durable, nos
+            expertises se complètent sous un même toit.
+          </p>
+          <Button asChild variant="link" className="text-link">
+            <Link to="/le-groupe">Rencontrez votre partenaire</Link>
+          </Button>
+        </div>
+      </section>
+
+      <section className="services-preview">
+        <div className="site-width">
+          <div className="section-heading">
+            <div>
+              <span className="eyebrow">CINQ EXPERTISES, UNE MÊME EXIGENCE</span>
+              <h2>
+                À chaque besoin,
+                <br />
+                la bonne expertise.
+              </h2>
+            </div>
+            <Button asChild variant="outline">
+              <Link to="/nos-services">Tous nos services</Link>
+            </Button>
+          </div>
+          <div className="service-grid">
+            {services.map((service) => (
+              <Link
+                to="/nos-services"
+                hash={service.id}
+                key={service.id}
+                className="service-card group"
+              >
+                <div className="service-card-top">
+                  <span>{service.number}</span>
+                  <span>{service.pillar}</span>
+                </div>
+                <h3>{service.name}</h3>
+                <p>{service.description}</p>
+                <span className="service-discover inline-flex items-center gap-1.5">
+                  Découvrir <ArrowRight className="size-3" />
+                </span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="mission-section site-width">
+        <span className="eyebrow">NOTRE CONVICTION</span>
+        <h2>
+          Une entreprise qui se formalise,
+          <br />
+          c’est un avenir qui se construit.
+        </h2>
+        <p>
+          Des emplois déclarés, des travailleurs couverts, un accès au crédit. La formalisation de
+          l’économie est au cœur de notre métier et de notre contribution au développement du Gabon.
+        </p>
+        <Link to="/le-groupe" className="text-link">
+          Découvrir notre vision
+        </Link>
+      </section>
+
+      <ContactBand />
+    </main>
+  );
 }

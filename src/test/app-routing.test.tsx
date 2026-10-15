@@ -14,4 +14,14 @@ describe("App routing", () => {
 
     expect(matches.at(-1)?.routeId).not.toBe(rootRouteId);
   });
+
+  it("matches legal routes /politique-de-confidentialite and /cgu", () => {
+    const router = createRouter({ routeTree, context: { queryClient: new QueryClient() } });
+
+    const privacyMatches = router.matchRoutes("/politique-de-confidentialite");
+    expect(privacyMatches.at(-1)?.routeId).not.toBe(rootRouteId);
+
+    const cguMatches = router.matchRoutes("/cgu");
+    expect(cguMatches.at(-1)?.routeId).not.toBe(rootRouteId);
+  });
 });
