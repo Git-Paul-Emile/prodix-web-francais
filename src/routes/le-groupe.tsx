@@ -15,7 +15,6 @@ function Group() {
   return (
     <main>
       <section className="page-title site-width">
-        <span className="eyebrow">LE GROUPE PRODIX</span>
         <h1>
           Ancrés au Gabon.
           <br />
@@ -33,7 +32,6 @@ function Group() {
       </div>
       <section className="intro-section site-width">
         <div>
-          <span className="eyebrow">NOTRE MISSION</span>
           <h2>
             De l’idée à<br />
             l’entreprise formelle.
@@ -56,7 +54,6 @@ function Group() {
       </section>
       <section className="values-section">
         <div className="site-width">
-          <span className="eyebrow">CE QUI NOUS GUIDE</span>
           <h2>
             Des valeurs qui se traduisent
             <br />
@@ -82,7 +79,6 @@ function Group() {
         </div>
       </section>
       <section className="mission-section site-width">
-        <span className="eyebrow">NOTRE IMPACT SOCIAL</span>
         <h2>
           Formaliser aujourd’hui.
           <br />

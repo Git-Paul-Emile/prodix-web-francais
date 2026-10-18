@@ -16,7 +16,6 @@ function CGU() {
   return (
     <main>
       <section className="page-title site-width">
-        <span className="eyebrow">CADRE LÉGAL ET CONDITIONS D’ACCÈS</span>
         <h1>Conditions Générales d’Utilisation</h1>
         <p>
           Règles d’utilisation du site web officiel de PRODIX Group et conditions applicables aux

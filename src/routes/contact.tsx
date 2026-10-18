@@ -88,7 +88,6 @@ function Contact() {
   return (
     <main>
       <section className="page-title site-width">
-        <span className="eyebrow">CONTACT</span>
         <h1>
           Parlons de
           <br />
@@ -136,7 +135,6 @@ function Contact() {
       {/* Interactive Form & Info section */}
       <section className="contact-section site-width">
         <div>
-          <span className="eyebrow">UN PREMIER ÉCHANGE SANS ENGAGEMENT</span>
           <h2>
             Transmettez-nous
             <br />
@@ -149,7 +147,7 @@ function Contact() {
 
           <div className="contact-details mt-8">
             <div>
-              <span className="eyebrow flex items-center gap-1">
+              <span className="contact-label flex items-center gap-1">
                 <Clock className="size-3" /> HORAIRES D'OUVERTURE
               </span>
               <p className="text-base text-foreground font-medium">
@@ -157,7 +155,7 @@ function Contact() {
               </p>
             </div>
             <div>
-              <span className="eyebrow flex items-center gap-1">
+              <span className="contact-label flex items-center gap-1">
                 <FileText className="size-3" /> DEMANDE DE DEVIS
               </span>
               <p className="text-base text-foreground font-medium">
@@ -311,7 +309,6 @@ function Contact() {
       <section className="brochure-section">
         <div className="site-width">
           <div>
-            <span className="eyebrow">POUR MIEUX NOUS CONNAÎTRE</span>
             <h2>Le groupe, en quelques pages.</h2>
             <p>Notre mission, nos expertises et nos engagements.</p>
           </div>

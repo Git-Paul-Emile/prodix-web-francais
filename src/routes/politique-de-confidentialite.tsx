@@ -16,7 +16,6 @@ function PrivacyPolicy() {
   return (
     <main>
       <section className="page-title site-width">
-        <span className="eyebrow">CONFIDENTIALITÉ ET PROTECTION DES DONNÉES</span>
         <h1>Politique de confidentialité</h1>
         <p>
           PRODIX Group s’engage à protéger la vie privée des utilisateurs de son site et de ses

@@ -76,7 +76,6 @@ function ServicesPage() {
       <section className="service-page-hero site-width">
         <div className="service-hero-grid">
           <div>
-            <span className="eyebrow">STRUCTURE DE SERVICES INTÉGRÉE • LIBREVILLE, GABON</span>
             <h1>
               Bâtir, équiper et
               <br />
@@ -156,7 +155,6 @@ function ServicesPage() {
       {/* 3. SERVICE OVERVIEW (Grille d'expertises détaillées) */}
       <section id="services-overview" className="service-overview-section site-width">
         <div className="service-overview-header">
-          <span className="eyebrow">NOTRE OFFRE COMPLÈTE</span>
           <h2>
             Tout ce dont votre organisation a besoin,
             <br />
@@ -211,7 +209,6 @@ function ServicesPage() {
         <div className="site-width">
           <div className="dark-showcase-header">
             <div>
-              <span className="eyebrow">RÉALISATIONS & ÉPREUVE DU TERRAIN</span>
               <h2>
                 Des résultats concrets
                 <br />
@@ -296,7 +293,6 @@ function ServicesPage() {
 
       {/* 5. WORK PROCESS (Méthodologie en 4 étapes) */}
       <section className="work-process-section site-width">
-        <span className="eyebrow">NOTRE MÉTHODE D'INTERVENTION</span>
         <h2>
           De la première conversation
           <br />
@@ -366,7 +362,6 @@ function ServicesPage() {
 
       {/* 7. TEAM INTRODUCTION (Hubs & Pôles de compétences) */}
       <section className="team-intro-section site-width">
-        <span className="eyebrow">ORGANISATION DU GROUPE</span>
         <h2>
           Des pôles spécialisés,
           <br />
@@ -415,7 +410,6 @@ function ServicesPage() {
       {/* 8. RELEVANT TESTIMONIALS (Témoignages concrets) */}
       <section className="testimonials-section" aria-label="Témoignages clients">
         <div className="site-width">
-          <span className="eyebrow">RETOURS D'EXPÉRIENCE</span>
           <h2>Ce que disent nos partenaires.</h2>
 
           <div className="testimonials-grid">
@@ -476,7 +470,6 @@ function ServicesPage() {
       <section className="faq-section site-width">
         <div className="faq-layout">
           <div>
-            <span className="eyebrow">QUESTIONS FRÉQUENTES</span>
             <h2 className="text-3xl font-bold mt-2">
               Tout ce que vous devez savoir avant de démarrer.
             </h2>
@@ -527,9 +520,6 @@ function ServicesPage() {
       <section className="final-cta-section site-width">
         <div className="final-cta-card">
           <div className="final-cta-content">
-            <span className="eyebrow" style={{ color: "var(--accent)" }}>
-              CONSTRUISONS VOTRE SUCCÈS
-            </span>
             <h2>Prêt à donner une nouvelle dimension à votre entreprise ?</h2>
             <p>
               Prenez contact dès aujourd'hui avec nos conseillers à Libreville pour un premier
